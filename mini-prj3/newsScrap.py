@@ -39,12 +39,13 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import smtplib
 import re
+from getpass import getpass
 
 #### gmail 발송 기능에 필요한 계정 정보를 아래 코드에 입력하세요.
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 465
-SMTP_USER = ''
-SMTP_PASSWORD = ''
+SMTP_USER = input('input smtp user> ')
+SMTP_PASSWORD = getpass('input smpt password> ')
 
 #### 아래 코드를 실행해 메일 발송에 필요한 send_mail 함수를 만드세요.
 def send_mail(name, addr, subject, contents, attachment=None):
