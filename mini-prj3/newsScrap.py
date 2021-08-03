@@ -27,7 +27,8 @@
 from NaverNewsCrawler import NaverNewsCrawler
 
 ####사용자로 부터 기사 수집을 원하는 키워드를 input을 이용해 입력받아 ? 부분에 넣으세요
-crawler = NaverNewsCrawler(?)
+keyword = input('수집을 원하는 키워드를 입력하세요> ')
+crawler = NaverNewsCrawler(keyword)
 
 #### 수집한 데이터를 저장할 엑셀 파일명을 input을 이용해 입력받아 ? 부분에 넣으세요
 crawler.get_news(?)
