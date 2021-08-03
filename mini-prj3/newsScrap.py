@@ -31,7 +31,8 @@ keyword = input('수집을 원하는 키워드를 입력하세요> ')
 crawler = NaverNewsCrawler(keyword)
 
 #### 수집한 데이터를 저장할 엑셀 파일명을 input을 이용해 입력받아 ? 부분에 넣으세요
-crawler.get_news(?)
+file_name = input('수집한 데이터를 저장할 엑셀 파일명을 입력하세요> ')
+crawler.get_news(file_name)
 
 #### 아래코드를 실행해 이메일 발송 기능에 필요한 모듈을 임포트하세요.
 from email.mime.text import MIMEText
