@@ -89,4 +89,6 @@ def send_mail(name, addr, subject, contents, attachment=None):
 from openpyxl import load_workbook
 
 #### email_list.xlsx 파일을 읽어와 해당 사람들에게 수집한 뉴스 정보 엑셀 파일을 send_mail 함수를 이용해 전송하세요.
-send_mail()
+ws = load_workbook('email_list.xlsx', read_only=True)['주소록']
+for row in ws.iter_rows():
+    send_mail(row[1].value, row[2].value, keyword+' 관련 수집한 뉴스 정보', keyword+' 관련 수집한 뉴스 정보입니다.', file_name)
