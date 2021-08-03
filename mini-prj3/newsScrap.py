@@ -86,7 +86,7 @@ def send_mail(name, addr, subject, contents, attachment=None):
 
 
 #### 엑셀 파일의 정보를 읽어올 수 있는 모듈을 import하세요.
-
+from openpyxl import load_workbook
 
 #### email_list.xlsx 파일을 읽어와 해당 사람들에게 수집한 뉴스 정보 엑셀 파일을 send_mail 함수를 이용해 전송하세요.
 send_mail()
